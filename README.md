@@ -15,7 +15,7 @@ Just experimenting with [reagent](http://reagent-project.github.io/), nothing se
 # Examples
 
 * counter
-* todo
+* _todo*_
 * _life*_
 * _sound cloud*_
 
