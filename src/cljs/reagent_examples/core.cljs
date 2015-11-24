@@ -5,18 +5,23 @@
               [accountant.core :as accountant]))
 
 ;; -------------------------
+;; Common
 
 (defonce next-id (atom 1))
 
 ;; -------------------------
+;; Counter
 
 (defonce counter (atom 0))
 (defn up [] (swap! counter inc))
 (defn down [] (swap! counter dec))
 
 ;; -------------------------
+;; Todo
 
 (defonce todos (atom (sorted-map)))
+
+;; Actions
 
 (defn todo-next-id [] (swap! next-id inc))
 
@@ -25,14 +30,30 @@
         todo {:id id :text text :completed false}]
     (swap! todos assoc id todo)))
 
-(defn todo-toggle [id]
+(defn todo-complete [id]
   (swap! todos update-in [id :completed] not))
 
 (defn todo-edit [id title]
   (swap! todos assoc-in [id :title]))
 
+(defn todo-delete [id]
+  (swap! todos dissoc id))
+
+(defonce init
+  (do
+   (todo-add "Learn some shit")
+   (todo-add "Write some shit")
+   (todo-add "Die")))
+
+;; Components
+
+(defn todo-app []
+  (let [items (vals @todos)]
+    [:ul
+     (map (fn [v] [:li (:text v)]) items)]))
+
 ;; -------------------------
-;; Views
+;; Pages
 
 (defn home-page []
   [:div [:h2 "index"]
@@ -51,8 +72,7 @@
 (defn todo-page []
   [:div [:h2 "todo"]
    [:div [:a {:href "/"} "index"]
-    [:div
-     [:h3 "lol"]]]])
+    [:div (todo-app)]]])
 
 (defn current-page []
   [:div [(session/get :current-page)]])
