@@ -2,5 +2,5 @@
   (:require [reagent-examples.todo.components.item :as item]))
 
 (defn component [items]
-  [:div
+  [:ul
    (map #([item/component %]) items)])

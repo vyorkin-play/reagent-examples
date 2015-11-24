@@ -10,7 +10,7 @@
   [:div [(session/get :current-page)]])
 
 (defn mount-root []
-  (r/render [pages/todo]
+  (r/render [current-page]
             (.getElementById js/document "app")))
 
 (defn init! []
