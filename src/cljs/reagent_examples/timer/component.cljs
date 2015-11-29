@@ -19,6 +19,5 @@
 
 (defn component []
   [:div
-   [:h3 "timer"]
    [clock]
    [color-input]])

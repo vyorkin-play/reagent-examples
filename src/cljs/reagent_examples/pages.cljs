@@ -2,7 +2,7 @@
   (:require [reagent-examples.counter.component :as counter]
             [reagent-examples.bmi.component :as bmi]
             [reagent-examples.timer.component :as timer]
-            [reagent-examples.todo.components.app :as todo]))
+            [reagent-examples.todo.component :as todo]))
 
 (defn navigation []
   [:ul
@@ -29,5 +29,4 @@
 
 (defn todo []
   [:div [:h2 "todo"]
-   [:div [:a {:href "/"} "index"]
-    [:div [todo/component]]]])
+    [todo/component]])
