@@ -4,7 +4,7 @@
 (defn next-id [] (swap! counter inc))
 
 (defn add [title]
-  (let [id (swap! counter inc)
+  (let [id (next-id)
         todo {:id id
               :title title
               :done false}]
