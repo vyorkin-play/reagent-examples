@@ -15,6 +15,7 @@ Just experimenting with [reagent](http://reagent-project.github.io/), nothing se
 * [Google Groups mailing list](https://groups.google.com/forum/#!forum/reagent-project)
 * [cljs cheat sheet #1](https://github.com/readevalprintlove/clojurescript-cheatsheet/blob/master/cljs-cheatsheet.pdf)
 * [cljs cheat sheet #2](http://cljs.info/cheatsheet/)
+* [flexbox cheat sheet #1](http://jonibologna.com/flexbox-cheatsheet/)
 
 ## Dependencies
 
