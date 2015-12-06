@@ -8,16 +8,18 @@
 
 (defn render [{:keys [title on-save]}]
   (let [val (r/atom title)
-        save #(let [v (-> @val str trim)]
-                (when-not (empty? v) (on-save v)))
         clear #(reset! val "")
+        save #(let [v (-> @val str trim)]
+                (when-not (empty? v)
+                  (do (on-save v)
+                      (clear))))
         change #(reset! val %)
         key-down #(condp = %
                     key-enter (save)
                     key-escape (clear)
                     nil)]
     (fn [props]
-      [:input (merge props
+      [:input#todo-new (merge props
                      {:type "text"
                       :value @val
                       :on-change #(change (-> % .-target .-value))

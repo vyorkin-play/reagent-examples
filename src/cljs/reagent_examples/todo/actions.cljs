@@ -7,8 +7,14 @@
   (let [id (next-id)
         todo {:id id
               :title title
-              :done false}]
+              :completed false}]
     (swap! todos assoc id todo)))
 
 (defn save [id title]
   (swap! todos assoc-in [id :title] title))
+
+(defn toggle [id]
+  (swap! todos update-in [id :completed] not))
+
+(defn delete [id]
+  (swap! todos dissoc id))
