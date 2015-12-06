@@ -18,6 +18,7 @@
                  [org.clojure/clojurescript "1.7.170" :scope "provided"]
                  [secretary "1.2.3"]
                  [venantius/accountant "0.1.5"]
+                 [alandipert/storage-atom "2.0.0-SNAPSHOT"]
                  ]
 
   :plugins [[lein-environ "1.0.1"]

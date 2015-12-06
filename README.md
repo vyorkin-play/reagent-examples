@@ -4,6 +4,8 @@ Just experimenting with [reagent](http://reagent-project.github.io/), nothing se
 
 # Resources
 
+## Main
+
 * [reagent-template](https://github.com/reagent-project/reagent-template)
 * [reagent-cookbook](https://github.com/reagent-project/reagent-cookbook)
 * [reagent-forms](https://github.com/reagent-project/reagent-forms)
@@ -13,6 +15,10 @@ Just experimenting with [reagent](http://reagent-project.github.io/), nothing se
 * [Google Groups mailing list](https://groups.google.com/forum/#!forum/reagent-project)
 * [cljs cheat sheet #1](https://github.com/readevalprintlove/clojurescript-cheatsheet/blob/master/cljs-cheatsheet.pdf)
 * [cljs cheat sheet #2](http://cljs.info/cheatsheet/)
+
+## Dependencies
+
+* [alandipert/storage-atom](https://github.com/alandipert/storage-atom)
 
 # Examples
 

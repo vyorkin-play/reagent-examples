@@ -2,7 +2,7 @@
   (:require [reagent-examples.counter.component :as counter]
             [reagent-examples.bmi.component :as bmi]
             [reagent-examples.timer.component :as timer]
-            [reagent-examples.todo.component :as todo]))
+            [reagent-examples.todo.core :as todo]))
 
 (defn navigation []
   [:ul
